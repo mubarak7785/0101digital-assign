@@ -3,7 +3,7 @@ const cors = require("cors")
 
 const app = express()
 app.use(cors())
-const port=process.env.PORT || 2064
+const port=process.env.PORT || 3000
 app.use(express.json())
 
 const connect=require("./configs/db")
@@ -15,7 +15,7 @@ app.use("/employee",empolyeeController)
 app.listen(port,async function (req,res){
     try{
         await connect();
-        console.log ("Listening Port 2064")
+        console.log ("Listening Port 3000")
     }catch(err){
         console.log(err.message)
     }
