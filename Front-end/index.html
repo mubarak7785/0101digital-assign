@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+    .main{
+      
+        padding: 30px 0px;
+        width: 30%;
+        height: 200px;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          margin-top: 10%;
+    }
+.main>div{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+    .main>div>p{
+        margin: 0%;
+        margin-bottom: 1%;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: calibri;
+    }
+    .main>div>input{
+        width: 300px;
+        height: 30px;
+    }
+
+    button{
+        border: none;
+        font-size: 14px;
+        padding: 10px 20px;
+        background-color: blue;
+        font-weight: bold;
+        color: white;
+        border-radius: 5px;
+    }
+    .yellow{
+        background-color: yellowgreen;
+        color: black;
+        font-weight: bold;
+        margin: 0%;
+        width: 20%;
+    }
+    h2,h3{
+        margin: 0%;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: black;
+    }
+</style>
+</head>
+
+<body>
+    <div class="yellow">
+        <h2>Admin Credential</h2>
+        <h3>email : admin@gmail.com</h3>
+        <h3>password: 123456</h3>
+    </div>
+    <div class="main">
+          <div>
+            <p>Login here</p>
+        </div>
+        <div>
+             <p>Email</p>
+        <input type="email" id="email" placeholder="Enter your Email" >
+        </div>
+        <div>
+             <p>Password</p>
+        <input type="password" id="pass" placeholder="Enter your Password" >
+        </div>
+        <div>
+            <button onclick="myFun()">Submit</button>
+        </div>
+       
+    </div>
+</body>
+</html>
+<script>
+    function myFun(){
+       email=document.querySelector("#email").value
+       password=document.querySelector("#pass").value
+
+       if(email=="admin@gmail.com" && password=="123456"){
+        alert("Logged in Successful")
+        window.location.href="next.html"
+       }
+       else{
+        alert("invalid Credential")
+       }
+    }
+</script>
